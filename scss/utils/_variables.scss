@@ -1,0 +1,85 @@
+$breakpoints: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1024px,
+);
+
+$base-font-size: 16px;
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+$focus-ring-width: 3px;
+$focus-ring-color: #2563eb;
+$focus-ring-offset: 2px;
+
+$btn-padding-y: 10px;
+$btn-padding-x: 14px;
+$icon-btn-size: 36px;
+$radius-btn: 8px;
+$radius-icon-btn: 6px;
+
+$focus-outline-width: 2px;
+$focus-outline-color: blue;
+$focus-outline-offset: 2px;
+$hover-brightness-factor: 0.97;
+
+$task-item-gap: 8px;
+$task-item-padding: 10px;
+
+$modal-max-width: 420px;
+$modal-padding: 16px;
+$modal-title-margin-b: 8px;
+$modal-title-font-size: 18px;
+$modal-field-gap: 4px;
+$modal-actions-gap: 8px;
+$modal-actions-margin-t: 12px;
+
+$theme-toggle-padding-y: 8px;
+$theme-toggle-padding-x: 12px;
+
+$task-item-gap: 8px;
+$task-item-padding: 8px;
+$task-item-font-size: 16px;
+
+$search-gap: 8px;
+$search-input-padding-y: 10px;
+$search-input-padding-x: 12px;
+$search-input-radius: 6px;
+
+$container-max-width: 900px;
+$container-margin-y: 32px;
+$container-padding-x: 16px;
+
+$todo-section-margin-t: 16px;
+$todo-section-title-size: 20px;
+$todo-section-title-margin-b: 4px;
+
+$header-gap: 12px;
+$header-padding: 16px;
+$header-z-index: 10;
+
+$theme-light: (
+  text_white: #ffffff,
+  model_text: #141a2a,
+  bg: #ffffff,
+  surface: #ffffff,
+  text: #1f2937,
+  muted: #6b7280,
+  primary: #2563eb,
+  card: #ffffff,
+  border: #e5e7eb,
+  done: #16a34a,
+  focus: 60 100% 50%,
+);
+
+$theme-dark: (
+  text_white: #ffffff,
+  model_text: #141a2a,
+  bg: #0b1020,
+  surface: #141a2a,
+  text: #e5e7eb,
+  muted: #9ca3af,
+  primary: #2f67ac,
+  card: #1f2540,
+  border: #2b2f54,
+  done: #38bdf8,
+);

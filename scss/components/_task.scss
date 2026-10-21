@@ -1,0 +1,25 @@
+@use "../utils" as *;
+
+.task-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: rem($task-item-gap);
+  align-items: center;
+  padding: rem($task-item-padding);
+  border-bottom: 1px solid var(--color-border);
+
+  @include respond-to(desktop) {
+    padding: rem($task-item-padding + 4px);
+    gap: rem($task-item-gap + 4px);
+  }
+
+  &__title { 
+    font-size: rem($task-item-font-size); 
+  }
+  &_done {
+    .task-item__title {
+      text-decoration: line-through;
+      color: var(--color-muted);
+    }
+  }
+}

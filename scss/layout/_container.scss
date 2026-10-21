@@ -1,0 +1,20 @@
+@use "../utils" as *;
+
+.container {
+  max-width: rem($container-max-width);
+  margin: rem($container-margin-y) auto;
+  padding: 0 rem($container-padding-x);
+  
+  @include respond-to(desktop) {
+    margin: rem($container-margin-y + 16px) auto;
+  }
+}
+.todo-section { 
+  margin-top: rem($todo-section-margin-t); 
+
+  &__title { 
+    font-size: rem($todo-section-title-size); 
+    margin: 0 0 rem($todo-section-title-margin-b); 
+    color: var(--color-text);
+  }
+}

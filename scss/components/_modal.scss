@@ -1,0 +1,27 @@
+@use "../utils" as *;
+
+.todo-modal {
+  width: min(90vw, rem($modal-max-width));
+  padding: rem($modal-padding);
+
+  @include respond-to(tablet) {
+    padding: rem($modal-padding + 8px);
+  }
+
+  &__title { 
+    margin: 0 0 rem($modal-title-margin-b); 
+    font-size: rem($modal-title-font-size); 
+    color: var(--color-model-text);
+  }
+  &__field { 
+    display: flex; 
+    flex-direction: column; 
+    gap: rem($modal-field-gap); 
+  }
+  &__actions {
+    display: flex; 
+    justify-content: flex-end; 
+    gap: rem($modal-actions-gap); 
+    margin-top: rem($modal-actions-margin-t);
+  }
+}

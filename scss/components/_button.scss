@@ -1,0 +1,37 @@
+@use "../utils" as *;
+
+.btn {
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  padding: rem($btn-padding-y) rem($btn-padding-x);
+  border-radius: rem($radius-btn);
+  cursor: pointer;
+  
+  @include respond-to(tablet) {
+    padding: rem($btn-padding-y + 2px) rem($btn-padding-x + 4px);
+  }
+
+  &:hover {
+    filter: brightness($hover-brightness-factor); 
+  }
+  &:focus {
+    outline: $focus-outline-width solid $focus-outline-color; 
+    outline-offset: rem($focus-outline-offset); 
+  }
+}
+
+.header__add-btn {
+  background: var(--color-primary);
+  color: var(--color-text_white);
+  border: none;
+}
+
+.icon-btn { 
+  width: rem($icon-btn-size); 
+  height: rem($icon-btn-size); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: rem($radius-icon-btn); 
+}
