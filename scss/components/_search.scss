@@ -1,0 +1,21 @@
+@use '../utils' as *;
+
+.header__search {
+  display: flex;
+  align-items: center;
+  gap: rem($search-gap);
+  flex: 1;
+}
+.header__search-input {
+  width: 100%;
+  padding: rem($search-input-padding-y) rem($search-input-padding-x);
+  border-radius: rem($search-input-radius);
+  border: 1px solid var(--color-border);
+  
+  background: var(--color-card); 
+  color: var(--color-text);
+
+  @include respond-to(tablet) {
+    padding: rem($search-input-padding-y + 2px) rem($search-input-padding-x + 2px);
+  }
+}

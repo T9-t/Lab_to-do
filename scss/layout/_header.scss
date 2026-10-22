@@ -1,0 +1,19 @@
+@use "../utils" as *;
+
+.header {
+  display: flex;
+  gap: rem($header-gap);
+  align-items: center;
+  flex-wrap: wrap;
+  padding: rem($header-padding);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  z-index: $header-z-index;
+
+  @include respond-to(tablet) {
+    gap: rem($header-gap + 4px);
+    padding: rem($header-padding + 4px) rem($header-padding);
+  }
+}

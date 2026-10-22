@@ -1,0 +1,9 @@
+@use "../utils" as *;
+
+.header__theme-toggle {
+  padding: rem($theme-toggle-padding-y) rem($theme-toggle-padding-x);
+  
+  @include respond-to(tablet) {
+    padding: rem($theme-toggle-padding-y + 2px) rem($theme-toggle-padding-x + 4px);
+  }
+}

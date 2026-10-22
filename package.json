@@ -1,0 +1,25 @@
+{
+  "name": "lab_to-do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:dev": "sass --watch scss/main.scss:dist/css/main.css",
+    "build": "sass --no-source-map --style=compressed scss/main.scss:dist/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T9-t/Lab_to-do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/T9-t/Lab_to-do/issues"
+  },
+  "homepage": "https://github.com/T9-t/Lab_to-do#readme",
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}
