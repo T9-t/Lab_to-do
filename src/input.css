@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --spacing-container-max-w: 900px;
+  --spacing-modal-max-w: 420px;
+  
+  --spacing-modal-pad: 16px;
+  --spacing-modal-title-mb: 8px;
+  --spacing-modal-field-gap: 4px;
+  --spacing-modal-actions-gap: 8px;
+  --spacing-modal-actions-mt: 12px;
+
+  --spacing-btn-py: 10px;
+  --spacing-btn-px: 14px;
+  --spacing-icon-btn: 36px;
+  --spacing-theme-toggle-py: 8px;
+  --spacing-theme-toggle-px: 12px;
+
+  --spacing-task-gap: 8px;
+  --spacing-task-pad: 8px;
+
+  --spacing-search-gap: 8px;
+  --spacing-search-py: 10px;
+  --spacing-search-px: 12px;
+
+  --spacing-container-my: 32px;
+  --spacing-container-px: 16px;
+  --spacing-todo-sec-mt: 16px;
+  --spacing-todo-sec-title-mb: 4px;
+  --spacing-header-gap: 12px;
+  --spacing-header-pad: 16px;
+
+  --radius-btn: 8px;
+  --radius-icon-btn: 6px;
+  --radius-search-input: 6px;
+
+  --text-base: 16px;
+  --text-modal-title: 18px;
+  --text-task-item: 16px;
+  --text-todo-sec-title: 20px;
+
+  --color-text-white: #ffffff;
+  --color-model-text: #141a2a;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-primary: #2563eb;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+  --color-done: #16a34a;
+  --color-focus: hsl(60 100% 50%);
+}
+:root {
+  --focus-ring-w: 3px;
+  --focus-ring-c: #2563eb;
+  --focus-ring-offset: 2px;
+  
+  --focus-outline-w: 2px;
+  --focus-outline-c: blue;
+  --focus-outline-offset: 2px;
+}
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
