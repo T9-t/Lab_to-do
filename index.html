@@ -4,52 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>To-Do List</title>
-    <link rel="stylesheet" href="dist/css/main.css">
   </head>
   <body class="bg-bg text-text font-main antialiased min-h-screen">
-
-    <header class="flex items-center flex-wrap gap-header-gap p-header-pad border-b border-border sticky top-0 bg-bg z-header tablet:gap-[calc(var(--spacing-header-gap)+4px)] tablet:py-[calc(var(--spacing-header-pad)+4px)] tablet:px-header-pad">
-        <h1 class="sr-only">To-Do List</h1>
-        
-        <form class="flex items-center gap-search-gap flex-1" role="search">
-            <label for="search-input" class="sr-only">Поиск по названию</label>
-            <input id="search-input" class="w-full py-search-py px-search-px rounded-search-input border border-border bg-card text-text placeholder-muted tablet:py-[calc(var(--spacing-search-py)+2px)] tablet:px-[calc(var(--spacing-search-px)+2px)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary js-search-input" type="search" placeholder="Поиск задач..."/>
-        </form>
-        
-        <button type="button" class="bg-primary text-text-white border-none py-btn-py px-btn-px rounded-btn cursor-pointer transition-all hover:brightness-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary tablet:py-[calc(var(--spacing-btn-py)+2px)] tablet:px-[calc(var(--spacing-btn-px)+4px)] js-open-modal">
-            Добавить задачу
-        </button>
-    </header>
-
-    <dialog id="todo-modal" class="backdrop:bg-black/50 fixed inset-0 m-auto w-[min(90vw,var(--spacing-modal-max-w))] h-fit p-modal-pad tablet:p-[calc(var(--spacing-modal-pad)+8px)] bg-surface border border-border rounded-btn js-todo-modal" aria-labelledby="modal-heading">
-        <h3 id="modal-heading" class="m-0 mb-modal-title-mb text-modal-title text-model-text font-semibold js-modal-title">
-            Добавить задачу
-        </h3>
-        <form class="js-modal-form">
-            <div class="flex flex-col gap-modal-field-gap">
-                <label for="modal-title-input" class="sr-only">Название задачи</label>
-                <input id="modal-title-input" class="w-full py-search-py px-search-px rounded-search-input border border-border bg-card text-text placeholder-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" type="text" placeholder="Название задачи" required />
-            </div>
-            <div class="flex justify-end gap-modal-actions-gap mt-modal-actions-mt">
-                <button type="submit" class="py-btn-py px-btn-px rounded-btn bg-primary text-text-white font-medium hover:brightness-[0.97] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                    Сохранить
-                </button>
-                <button type="button" class="py-btn-py px-btn-px rounded-btn border border-border text-text font-medium hover:brightness-[0.97] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary js-modal-cancel">
-                    Отмена
-                </button>
-            </div>
-        </form>
-    </dialog>
-
-    <main class="max-w-container-max-w mx-auto my-container-my px-container-px desktop:my-[calc(var(--spacing-container-my)+16px)]">
-        <section class="mt-todo-sec-mt" aria-labelledby="todo-list-title">
-            <h2 id="todo-list-title" class="text-todo-sec-title m-0 mb-todo-sec-title-mb text-text font-bold">
-                Список задач
-            </h2>
-            <ul class="js-task-list flex flex-col gap-task-gap"></ul>
-        </section>
-    </main>
-
-    <script src="js/main.js" defer></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind:dev": "tailwindcss -i ./src/input.css -o ./dist/css/main.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/css/main.css --minify"
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,9 @@
   "homepage": "https://github.com/T9-t/Lab_to-do#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5"
   }
 }
