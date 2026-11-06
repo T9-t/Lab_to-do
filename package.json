@@ -25,5 +25,10 @@
     "@vitejs/plugin-vue": "^6.0.10",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "pinia": "^4.1.0",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "vue-router": "^5.4.0"
   }
 }
