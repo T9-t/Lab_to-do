@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --breakpoint-mobile: 480px;
@@ -9,7 +9,7 @@
 
   --spacing-container-max-w: 900px;
   --spacing-modal-max-w: 420px;
-  
+
   --spacing-modal-pad: 16px;
   --spacing-modal-title-mb: 8px;
   --spacing-modal-field-gap: 4px;
@@ -61,7 +61,7 @@
   --focus-ring-w: 3px;
   --focus-ring-c: #2563eb;
   --focus-ring-offset: 2px;
-  
+
   --focus-outline-w: 2px;
   --focus-outline-c: blue;
   --focus-outline-offset: 2px;

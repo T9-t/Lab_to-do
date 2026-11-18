@@ -1,13 +1,16 @@
 <template>
   <section class="mt-todo-sec-mt" aria-labelledby="todo-list-title">
-    <h2 id="todo-list-title" class="text-todo-sec-title m-0 mb-todo-sec-title-mb text-text font-bold">
+    <h2
+      id="todo-list-title"
+      class="text-todo-sec-title m-0 mb-todo-sec-title-mb text-text font-bold"
+    >
       Список задач
     </h2>
-    
+
     <ul v-if="tasks.length > 0" class="flex flex-col gap-task-gap">
-      <TodoItem 
-        v-for="(task, index) in tasks" 
-        :key="task.id" 
+      <TodoItem
+        v-for="task in tasks"
+        :key="task.id"
         ref="itemRefs"
         :task="task"
         @toggle="$emit('toggle-task', $event)"
@@ -22,31 +25,32 @@
   </section>
 </template>
 
-<script setup>
-  import { ref, onBeforeUpdate } from 'vue'
-  import TodoItem from './TodoItem.vue'
+<script setup lang="ts">
+import { ref, onBeforeUpdate } from 'vue'
+import TodoItem from './TodoItem.vue'
+import type { TodoItem as TodoItemType } from '../types/todo'
 
-  defineProps({
-    tasks: {
-      type: Array,
-      required: true
-    }
-  })
-  defineEmits(['toggle-task', 'edit-task', 'delete-task'])
+defineProps<{
+  tasks: TodoItemType[]
+}>()
 
-  const itemRefs = ref([])
+defineEmits<{
+  'toggle-task': [id: TodoItemType['id']]
+  'edit-task': [task: TodoItemType]
+  'delete-task': [id: TodoItemType['id']]
+}>()
 
-  onBeforeUpdate(() => {
-    itemRefs.value = []
-  })
+const itemRefs = ref<InstanceType<typeof TodoItem>[]>([])
 
-  function focusItemAt(index) {
-    if (itemRefs.value[index]) {
-      itemRefs.value[index].focusCheckbox()
-    }
-  }
+onBeforeUpdate(() => {
+  itemRefs.value = []
+})
 
-  defineExpose({
-    focusItemAt
-  })
+function focusItemAt(index: number) {
+  itemRefs.value[index]?.focusCheckbox()
+}
+
+defineExpose({
+  focusItemAt
+})
 </script>
