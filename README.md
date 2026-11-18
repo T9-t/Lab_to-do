@@ -63,5 +63,5 @@ npm run preview
 
 ### Описание способа публикации
 
-- Ссылка на просмотр: https://todo9-seven.vercel.app/
+- Ссылка на просмотр: https://todo9-git-lab-9-t9-b05a.vercel.app/
 - Сайт опубликован на Vercel
